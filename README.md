@@ -15,4 +15,4 @@
 11. Created nested vm with virtual machine manager
 12. Created a test file and executed to see the ouput.
 
-file:///home/himaja/Downloads/Screenshot%20from%202021-11-22%2022-24-48.png![image](https://user-images.githubusercontent.com/79035205/142981474-af563738-5a78-47b3-875a-25aea8931e02.png)
+(https://user-images.githubusercontent.com/79035205/142981474-af563738-5a78-47b3-875a-25aea8931e02.png)
