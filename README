@@ -11,5 +11,6 @@
 7. Executed `sudo make -j 8 modules`
 8. Executed `sudo make -j 8`
 9. Executed `make INSTALL_MOD_STRIP=1 modules_install`
-10. Created nested vm with virtual machine manager
-11. Created a test file and executed to see the ouput.
+10. Loaded kvm using the command `modprobe kvm` and `modprobe kvm_linux`
+11. Created nested vm with virtual machine manager
+12. Created a test file and executed to see the ouput.
