@@ -15,4 +15,4 @@
 11. Created nested vm with virtual machine manager
 12. Created a test file and executed to see the ouput.
 
-(https://user-images.githubusercontent.com/79035205/142981474-af563738-5a78-47b3-875a-25aea8931e02.png)
+![image](https://user-images.githubusercontent.com/79035205/142982010-f4b75b86-6036-4698-ae5b-8329b369580f.png)
