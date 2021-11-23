@@ -1,18 +1,15 @@
-Linux kernel
-============
+# cmpe 283 Assignment 2
+##Done by Sujatha Nadimpalli
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
-
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
-
-    https://www.kernel.org/doc/html/latest/
-
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
-
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+##Steps followed are as follows:
+1. Forked the linux tree
+2. Cloned the repo into an Ubuntu machine
+3. Downloaded required packages for building kernel.
+4. Executed the command 'sudo cp /boot/{config-name} ./.config
+5. Executed 'sudo make oldconfig'
+6. Edited cpuid.c and vmx.c files to satisfy the first two requirements mentioned in the assignment.
+7. Executed `sudo make -j 8 modules`
+8. Executed `sudo make -j 8`
+9. Executed `make INSTALL_MOD_STRIP=1 modules_install`
+10. Created nested vm with virtual machine manager
+11. Created a test file and executed to see the ouput.
