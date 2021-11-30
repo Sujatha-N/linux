@@ -81,6 +81,131 @@ MODULE_LICENSE("GPL");
 extern atomic_t count_exit;
 extern atomic64_t time_took_for_exiting;
 
+/* Ass-3 Changes */
+
+extern atomic_t EXCEPTION_NMI_COUNT;
+extern atomic_t EXTERNAL_INTERRUPT_COUNT;
+extern atomic_t TRIPLE_FAULT_COUNT;     
+extern atomic_t INIT_SIGNAL_COUNT;	  
+extern atomic_t SIPI_SIGNAL_COUNT;      
+extern atomic_t INTERRUPT_WINDOW_COUNT; 
+extern atomic_t NMI_WINDOW_COUNT;       
+extern atomic_t TASK_SWITCH_COUNT;      
+extern atomic_t CPUID_COUNT;            
+extern atomic_t HLT_COUNT;              
+extern atomic_t INVD_COUNT;             
+extern atomic_t INVLPG_COUNT;           
+extern atomic_t RDPMC_COUNT;            
+extern atomic_t RDTSC_COUNT;            
+extern atomic_t VMCALL_COUNT;           
+extern atomic_t VMCLEAR_COUNT;          
+extern atomic_t VMLAUNCH_COUNT;         
+extern atomic_t VMPTRLD_COUNT;          
+extern atomic_t VMPTRST_COUNT;          
+extern atomic_t VMREAD_COUNT;           
+extern atomic_t VMRESUME_COUNT;         
+extern atomic_t VMWRITE_COUNT;          
+extern atomic_t VMOFF_COUNT;            
+extern atomic_t VMON_COUNT;             
+extern atomic_t CR_ACCESS_COUNT;        
+extern atomic_t DR_ACCESS_COUNT;        
+extern atomic_t IO_INSTRUCTION_COUNT;   
+extern atomic_t MSR_READ_COUNT;         
+extern atomic_t MSR_WRITE_COUNT;        
+extern atomic_t INVALID_STATE_COUNT;    
+extern atomic_t MSR_LOAD_FAIL_COUNT;    
+extern atomic_t MWAIT_INSTRUCTION_COUNT;
+extern atomic_t MONITOR_TRAP_FLAG_COUNT;
+extern atomic_t MONITOR_INSTRUCTION_COUNT;
+extern atomic_t PAUSE_INSTRUCTION_COUNT;
+extern atomic_t MCE_DURING_VMENTRY_COUNT;
+extern atomic_t TPR_BELOW_THRESHOLD_COUNT;
+extern atomic_t APIC_ACCESS_COUNT;
+extern atomic_t EOI_INDUCED_COUNT;      
+extern atomic_t GDTR_IDTR_COUNT;        
+extern atomic_t LDTR_TR_COUNT;          
+extern atomic_t EPT_VIOLATION_COUNT;    
+extern atomic_t EPT_MISCONFIG_COUNT;    
+extern atomic_t INVEPT_COUNT;           
+extern atomic_t RDTSC_COUNTP;           
+extern atomic_t PREEMPTION_TIMER_COUNT; 
+extern atomic_t INVVPID_COUNT;          
+extern atomic_t WBINVD_COUNT;           
+extern atomic_t XSETBV_COUNT;           
+extern atomic_t APIC_WRITE_COUNT;       
+extern atomic_t RDRAND_COUNT;           
+extern atomic_t INVPCID_COUNT;          
+extern atomic_t VMFUNC_COUNT;           
+extern atomic_t ENCLS_COUNT;            
+extern atomic_t RDSEED_COUNT;           
+extern atomic_t PML_FULL_COUNT;         
+extern atomic_t XSAVES_COUNT;           
+extern atomic_t XRSTORS_COUNT;          
+extern atomic_t UMWAIT_COUNT;           
+extern atomic_t TPAUSE_COUNT;
+
+
+extern atomic64_t EXCEPTION_NMI_TIMECYCLES;
+extern atomic64_t EXTERNAL_INTERRUPT_TIMECYCLES; 
+extern atomic64_t TRIPLE_FAULT_TIMECYCLES;
+extern atomic64_t INIT_SIGNAL_TIMECYCLES;
+extern atomic64_t SIPI_SIGNAL_TIMECYCLES;
+extern atomic64_t INTERRUPT_WINDOW_TIMECYCLES; 
+extern atomic64_t NMI_WINDOW_TIMECYCLES;      
+extern atomic64_t TASK_SWITCH_TIMECYCLES;     
+extern atomic64_t CPUID_TIMECYCLES;
+extern atomic64_t HLT_TIMECYCLES;              
+extern atomic64_t INVD_TIMECYCLES;             
+extern atomic64_t INVLPG_TIMECYCLES;         
+extern atomic64_t RDPMC_TIMECYCLES;         
+extern atomic64_t RDTSC_TIMECYCLES;          
+extern atomic64_t VMCALL_TIMECYCLES;        
+extern atomic64_t VMCLEAR_TIMECYCLES;     
+extern atomic64_t VMLAUNCH_TIMECYCLES;   
+extern atomic64_t VMPTRLD_TIMECYCLES;      
+extern atomic64_t VMPTRST_TIMECYCLES;     
+extern atomic64_t VMREAD_TIMECYCLES;       
+extern atomic64_t VMRESUME_TIMECYCLES;  
+extern atomic64_t VMWRITE_TIMECYCLES;      
+extern atomic64_t VMOFF_TIMECYCLES;          
+extern atomic64_t VMON_TIMECYCLES;           
+extern atomic64_t CR_ACCESS_TIMECYCLES;        
+extern atomic64_t DR_ACCESS_TIMECYCLES;        
+extern atomic64_t IO_INSTRUCTION_TIMECYCLES; 
+extern atomic64_t MSR_READ_TIMECYCLES;         
+extern atomic64_t MSR_WRITE_TIMECYCLES;        
+extern atomic64_t INVALID_STATE_TIMECYCLES;   
+extern atomic64_t MSR_LOAD_FAIL_TIMECYCLES; 
+extern atomic64_t MWAIT_INSTRUCTION_TIMECYCLES;
+extern atomic64_t MONITOR_TRAP_FLAG_TIMECYCLES;
+extern atomic64_t MONITOR_INSTRUCTION_TIMECYCLES;
+extern atomic64_t PAUSE_INSTRUCTION_TIMECYCLES;
+extern atomic64_t MCE_DURING_VMENTRY_TIMECYCLES;
+extern atomic64_t TPR_BELOW_THRESHOLD_TIMECYCLES;
+extern atomic64_t APIC_ACCESS_TIMECYCLES;
+extern atomic64_t EOI_INDUCED_TIMECYCLES;
+extern atomic64_t GDTR_IDTR_TIMECYCLES;        
+extern atomic64_t LDTR_TR_TIMECYCLES;
+extern atomic64_t EPT_VIOLATION_TIMECYCLES;
+extern atomic64_t EPT_MISCONFIG_TIMECYCLES;
+extern atomic64_t INVEPT_TIMECYCLES;
+extern atomic64_t RDTSC_TIMECYCLESP;
+extern atomic64_t PREEMPTION_TIMER_TIMECYCLES;
+extern atomic64_t INVVPID_TIMECYCLES;       
+extern atomic64_t WBINVD_TIMECYCLES;       
+extern atomic64_t XSETBV_TIMECYCLES;       
+extern atomic64_t APIC_WRITE_TIMECYCLES;
+extern atomic64_t RDRAND_TIMECYCLES;       
+extern atomic64_t INVPCID_TIMECYCLES;       
+extern atomic64_t VMFUNC_TIMECYCLES;       
+extern atomic64_t ENCLS_TIMECYCLES;          
+extern atomic64_t RDSEED_TIMECYCLES;       
+extern atomic64_t PML_FULL_TIMECYCLES;    
+extern atomic64_t XSAVES_TIMECYCLES;       
+extern atomic64_t XRSTORS_TIMECYCLES;     
+extern atomic64_t UMWAIT_TIMECYCLES;       
+extern atomic64_t TPAUSE_TIMECYCLES;
+
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
 	X86_MATCH_FEATURE(X86_FEATURE_VMX, NULL),
@@ -6034,6 +6159,254 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	end = rdtsc();
 
 	atomic64_fetch_add(end-start, &time_took_for_exiting);
+	
+	switch(exit_reason.basic)
+	{
+	
+		case EXIT_REASON_EXCEPTION_NMI:
+			atomic_inc(&EXCEPTION_NMI_COUNT);
+			atomic64_fetch_add(end-start, &EXCEPTION_NMI_TIMECYCLES);
+			break;
+		case EXIT_REASON_EXTERNAL_INTERRUPT:
+			atomic_inc(&EXTERNAL_INTERRUPT_COUNT);
+			atomic64_fetch_add(end-start, &EXTERNAL_INTERRUPT_TIMECYCLES);
+			break;
+		case EXIT_REASON_TRIPLE_FAULT:
+			atomic_inc(&TRIPLE_FAULT_COUNT);
+			atomic64_fetch_add(end-start, &TRIPLE_FAULT_TIMECYCLES);
+			break;    
+		case EXIT_REASON_INIT_SIGNAL:
+			atomic_inc(&INIT_SIGNAL_COUNT);
+			atomic64_fetch_add(end-start,  &INIT_SIGNAL_TIMECYCLES);
+			break;		
+		case EXIT_REASON_SIPI_SIGNAL:
+			atomic_inc(&SIPI_SIGNAL_COUNT);
+			atomic64_fetch_add(end-start, &SIPI_SIGNAL_TIMECYCLES);
+			break;     
+		case EXIT_REASON_INTERRUPT_WINDOW:
+			atomic_inc(&INTERRUPT_WINDOW_COUNT);
+			atomic64_fetch_add(end-start, &INTERRUPT_WINDOW_TIMECYCLES);
+			break;
+		case EXIT_REASON_NMI_WINDOW:
+			atomic_inc(&NMI_WINDOW_COUNT);
+			atomic64_fetch_add(end-start, &NMI_WINDOW_TIMECYCLES);
+			break;      
+		case EXIT_REASON_TASK_SWITCH:
+			atomic_inc(&TASK_SWITCH_COUNT);
+			atomic64_fetch_add(end-start, &TASK_SWITCH_TIMECYCLES);
+			break;     
+		case EXIT_REASON_CPUID:
+			atomic_inc(&CPUID_COUNT);
+			atomic64_fetch_add(end-start, &CPUID_TIMECYCLES);
+			break;           
+		case EXIT_REASON_HLT:
+			atomic_inc(&HLT_COUNT);
+			atomic64_fetch_add(end-start, &HLT_TIMECYCLES);
+			break;             
+		case EXIT_REASON_INVD:
+			atomic_inc(&INVD_COUNT);
+			atomic64_fetch_add(end-start, &INVD_TIMECYCLES);
+			break;            
+		case EXIT_REASON_INVLPG:
+			atomic_inc(&INVLPG_COUNT);
+			atomic64_fetch_add(end-start, &INVLPG_TIMECYCLES);
+			break;          
+		case EXIT_REASON_RDPMC:
+			atomic_inc(&RDPMC_COUNT);
+			atomic64_fetch_add(end-start, &RDPMC_TIMECYCLES);
+			break;           
+		case EXIT_REASON_RDTSC:
+			atomic_inc(&RDTSC_COUNT);
+			atomic64_fetch_add(end-start, &RDTSC_TIMECYCLES);
+			break;           
+		case EXIT_REASON_VMCALL:
+			atomic_inc(&VMCALL_COUNT);
+			atomic64_fetch_add(end-start, &VMCALL_TIMECYCLES);
+			break;          
+		case EXIT_REASON_VMCLEAR:
+			atomic_inc(&VMCLEAR_COUNT);
+			atomic64_fetch_add(end-start, &VMCLEAR_TIMECYCLES);
+			break;         
+		case EXIT_REASON_VMLAUNCH:
+			atomic_inc(&VMLAUNCH_COUNT);
+			atomic64_fetch_add(end-start, &VMLAUNCH_TIMECYCLES);
+			break;        
+		case EXIT_REASON_VMPTRLD:
+			atomic_inc(&VMPTRLD_COUNT);
+			atomic64_fetch_add(end-start, &VMPTRLD_TIMECYCLES);
+			break;         
+		case EXIT_REASON_VMPTRST:
+			atomic_inc(&VMPTRST_COUNT);
+			atomic64_fetch_add(end-start,  &VMPTRST_TIMECYCLES);
+			break;         
+		case EXIT_REASON_VMREAD:
+			atomic_inc(&VMREAD_COUNT);
+			atomic64_fetch_add(end-start, &VMREAD_TIMECYCLES);
+			break;          
+		case EXIT_REASON_VMRESUME:
+			atomic_inc(&VMRESUME_COUNT);
+			atomic64_fetch_add(end-start, &VMRESUME_TIMECYCLES);
+			break;        
+		case EXIT_REASON_VMWRITE:
+			atomic_inc(&VMWRITE_COUNT);
+			atomic64_fetch_add(end-start, &VMWRITE_TIMECYCLES);
+			break;         
+		case EXIT_REASON_VMOFF:
+			atomic_inc(&VMOFF_COUNT);
+			atomic64_fetch_add(end-start, &VMOFF_TIMECYCLES);
+			break;           
+		case EXIT_REASON_VMON:
+			atomic_inc(&VMON_COUNT);
+			atomic64_fetch_add(end-start, &VMON_TIMECYCLES);
+			break;            
+		case EXIT_REASON_CR_ACCESS:
+			atomic_inc(&CR_ACCESS_COUNT);
+			atomic64_fetch_add(end-start, &CR_ACCESS_TIMECYCLES);
+			break;       
+		case EXIT_REASON_DR_ACCESS:
+			atomic_inc(&DR_ACCESS_COUNT);
+			atomic64_fetch_add(end-start, &DR_ACCESS_TIMECYCLES);
+			break;       
+		case EXIT_REASON_IO_INSTRUCTION:
+			atomic_inc(&IO_INSTRUCTION_COUNT);
+			atomic64_fetch_add(end-start, &IO_INSTRUCTION_TIMECYCLES);
+			break;  
+		case EXIT_REASON_MSR_READ:
+			atomic_inc(&MSR_READ_COUNT);
+			atomic64_fetch_add(end-start, &MSR_READ_TIMECYCLES);
+			break;        
+		case EXIT_REASON_MSR_WRITE:
+			atomic_inc(&MSR_WRITE_COUNT);
+			atomic64_fetch_add(end-start, &MSR_WRITE_TIMECYCLES);
+			break;       
+		case EXIT_REASON_INVALID_STATE:
+			atomic_inc(&INVALID_STATE_COUNT);
+			atomic64_fetch_add(end-start, &INVALID_STATE_TIMECYCLES);
+			break;   
+		case EXIT_REASON_MSR_LOAD_FAIL:
+			atomic_inc(&MSR_LOAD_FAIL_COUNT);
+			atomic64_fetch_add(end-start, &MSR_LOAD_FAIL_TIMECYCLES);
+			break;   
+		case EXIT_REASON_MWAIT_INSTRUCTION:
+			atomic_inc(&MWAIT_INSTRUCTION_COUNT);
+			atomic64_fetch_add(end-start,  &MWAIT_INSTRUCTION_TIMECYCLES);
+			break;
+		case EXIT_REASON_MONITOR_TRAP_FLAG:
+			atomic_inc(&MONITOR_TRAP_FLAG_COUNT);
+			atomic64_fetch_add(end-start, &MONITOR_TRAP_FLAG_TIMECYCLES);
+			break;
+		case EXIT_REASON_MONITOR_INSTRUCTION:
+			atomic_inc(&MONITOR_INSTRUCTION_COUNT);
+			atomic64_fetch_add(end-start,  &MONITOR_INSTRUCTION_TIMECYCLES);
+			break;
+		case EXIT_REASON_PAUSE_INSTRUCTION:
+			atomic_inc(&PAUSE_INSTRUCTION_COUNT);
+			atomic64_fetch_add(end-start, &PAUSE_INSTRUCTION_TIMECYCLES);
+			break;
+		case EXIT_REASON_MCE_DURING_VMENTRY:
+			atomic_inc(&MCE_DURING_VMENTRY_COUNT);
+			atomic64_fetch_add(end-start, &MCE_DURING_VMENTRY_TIMECYCLES);
+			break;
+		case EXIT_REASON_TPR_BELOW_THRESHOLD:
+			atomic_inc(&TPR_BELOW_THRESHOLD_COUNT);
+			atomic64_fetch_add(end-start, &TPR_BELOW_THRESHOLD_TIMECYCLES);
+			break;
+		case EXIT_REASON_APIC_ACCESS:
+			atomic_inc(&APIC_ACCESS_COUNT);
+			atomic64_fetch_add(end-start, &APIC_ACCESS_TIMECYCLES);
+			break;     
+		case EXIT_REASON_EOI_INDUCED:
+			atomic_inc(&EOI_INDUCED_COUNT);
+			atomic64_fetch_add(end-start, &EOI_INDUCED_TIMECYCLES);
+			break;     
+		case EXIT_REASON_GDTR_IDTR:
+			atomic_inc(&GDTR_IDTR_COUNT);
+			atomic64_fetch_add(end-start, &GDTR_IDTR_TIMECYCLES);
+			break;       
+		case EXIT_REASON_LDTR_TR:
+			atomic_inc(&LDTR_TR_COUNT);
+			atomic64_fetch_add(end-start, &LDTR_TR_TIMECYCLES);
+			break;         
+		case EXIT_REASON_EPT_VIOLATION:
+			atomic_inc(&EPT_VIOLATION_COUNT);
+			atomic64_fetch_add(end-start, &EPT_VIOLATION_TIMECYCLES);
+			break;   
+		case EXIT_REASON_EPT_MISCONFIG:
+			atomic_inc(&EPT_MISCONFIG_COUNT);
+			atomic64_fetch_add(end-start, &EPT_MISCONFIG_TIMECYCLES);
+			break;   
+		case EXIT_REASON_INVEPT:
+			atomic_inc(&INVEPT_COUNT);
+			atomic64_fetch_add(end-start, &INVEPT_TIMECYCLES);
+			break;          
+		case EXIT_REASON_RDTSCP:
+			atomic_inc(&RDTSC_COUNTP);
+			atomic64_fetch_add(end-start, &RDTSC_TIMECYCLESP);
+			break;          
+		case EXIT_REASON_PREEMPTION_TIMER:
+			atomic_inc(&PREEMPTION_TIMER_COUNT);
+			atomic64_fetch_add(end-start, &PREEMPTION_TIMER_TIMECYCLES);
+			break;
+		case EXIT_REASON_INVVPID:
+			atomic_inc(&INVVPID_COUNT);
+			atomic64_fetch_add(end-start, &INVVPID_TIMECYCLES);
+			break;         
+		case EXIT_REASON_WBINVD:
+			atomic_inc(&WBINVD_COUNT);
+			atomic64_fetch_add(end-start, &WBINVD_TIMECYCLES);
+			break;          
+		case EXIT_REASON_XSETBV:
+			atomic_inc(&XSETBV_COUNT);
+			atomic64_fetch_add(end-start, &XSETBV_TIMECYCLES);
+			break;          
+		case EXIT_REASON_APIC_WRITE:
+			atomic_inc(&APIC_WRITE_COUNT);
+			atomic64_fetch_add(end-start, &APIC_WRITE_TIMECYCLES);
+			break;      
+		case EXIT_REASON_RDRAND:
+			atomic_inc(&RDRAND_COUNT);
+			atomic64_fetch_add(end-start, &RDRAND_TIMECYCLES);
+			break;          
+		case EXIT_REASON_INVPCID:
+			atomic_inc(&INVPCID_COUNT);
+			atomic64_fetch_add(end-start, &INVPCID_TIMECYCLES);
+			break;         
+		case EXIT_REASON_VMFUNC:
+			atomic_inc(&VMFUNC_COUNT);
+			atomic64_fetch_add(end-start, &VMFUNC_TIMECYCLES);
+			break;          
+		case EXIT_REASON_ENCLS:
+			atomic_inc(&ENCLS_COUNT);
+			atomic64_fetch_add(end-start, &ENCLS_TIMECYCLES);
+			break;           
+		case EXIT_REASON_RDSEED:
+			atomic_inc(&RDSEED_COUNT);
+			atomic64_fetch_add(end-start, &RDSEED_TIMECYCLES);
+			break;          
+		case EXIT_REASON_PML_FULL:
+			atomic_inc(&PML_FULL_COUNT);
+			atomic64_fetch_add(end-start, &PML_FULL_TIMECYCLES);
+			break;        
+		case EXIT_REASON_XSAVES:
+			atomic_inc(&XSAVES_COUNT);
+			atomic64_fetch_add(end-start, &XSAVES_TIMECYCLES);
+			break;          
+		case EXIT_REASON_XRSTORS:
+			atomic_inc(&XRSTORS_COUNT);
+			atomic64_fetch_add(end-start, &XRSTORS_TIMECYCLES);
+			break;         
+		case EXIT_REASON_UMWAIT:
+			atomic_inc(&UMWAIT_COUNT);
+			atomic64_fetch_add(end-start, &UMWAIT_TIMECYCLES);
+			break;          
+		case EXIT_REASON_TPAUSE:
+			atomic_inc(&TPAUSE_COUNT);
+			atomic64_fetch_add(end-start, &TPAUSE_TIMECYCLES);
+			break;
+		default:
+			break;
+			
+	}
 
 	return kvm_vmx_exit_handlers[exit_handler_index](vcpu);
 
