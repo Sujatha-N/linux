@@ -1269,10 +1269,258 @@ atomic64_t time_took_for_exiting = ATOMIC_INIT(0);
 EXPORT_SYMBOL(count_exit);
 EXPORT_SYMBOL(time_took_for_exiting);
 
+
+atomic_t EXCEPTION_NMI_COUNT    = ATOMIC_INIT(0);
+atomic_t EXTERNAL_INTERRUPT_COUNT = ATOMIC_INIT(0);
+atomic_t TRIPLE_FAULT_COUNT     = ATOMIC_INIT(0);
+atomic_t INIT_SIGNAL_COUNT	  = ATOMIC_INIT(0);
+atomic_t SIPI_SIGNAL_COUNT      = ATOMIC_INIT(0);
+atomic_t INTERRUPT_WINDOW_COUNT = ATOMIC_INIT(0);
+atomic_t NMI_WINDOW_COUNT       = ATOMIC_INIT(0);
+atomic_t TASK_SWITCH_COUNT      = ATOMIC_INIT(0);
+atomic_t CPUID_COUNT            = ATOMIC_INIT(0);
+atomic_t HLT_COUNT              = ATOMIC_INIT(0);
+atomic_t INVD_COUNT             = ATOMIC_INIT(0);
+atomic_t INVLPG_COUNT           = ATOMIC_INIT(0);
+atomic_t RDPMC_COUNT            = ATOMIC_INIT(0);
+atomic_t RDTSC_COUNT            = ATOMIC_INIT(0);
+atomic_t VMCALL_COUNT           = ATOMIC_INIT(0);
+atomic_t VMCLEAR_COUNT          = ATOMIC_INIT(0);
+atomic_t VMLAUNCH_COUNT         = ATOMIC_INIT(0);
+atomic_t VMPTRLD_COUNT          = ATOMIC_INIT(0);
+atomic_t VMPTRST_COUNT          = ATOMIC_INIT(0);
+atomic_t VMREAD_COUNT           = ATOMIC_INIT(0);
+atomic_t VMRESUME_COUNT         = ATOMIC_INIT(0);
+atomic_t VMWRITE_COUNT          = ATOMIC_INIT(0);
+atomic_t VMOFF_COUNT            = ATOMIC_INIT(0);
+atomic_t VMON_COUNT             = ATOMIC_INIT(0);
+atomic_t CR_ACCESS_COUNT        = ATOMIC_INIT(0);
+atomic_t DR_ACCESS_COUNT        = ATOMIC_INIT(0);
+atomic_t IO_INSTRUCTION_COUNT   = ATOMIC_INIT(0);
+atomic_t MSR_READ_COUNT         = ATOMIC_INIT(0);
+atomic_t MSR_WRITE_COUNT        = ATOMIC_INIT(0);
+atomic_t INVALID_STATE_COUNT    = ATOMIC_INIT(0);
+atomic_t MSR_LOAD_FAIL_COUNT    = ATOMIC_INIT(0);
+atomic_t MWAIT_INSTRUCTION_COUNT = ATOMIC_INIT(0);
+atomic_t MONITOR_TRAP_FLAG_COUNT = ATOMIC_INIT(0);
+atomic_t MONITOR_INSTRUCTION_COUNT = ATOMIC_INIT(0);
+atomic_t PAUSE_INSTRUCTION_COUNT = ATOMIC_INIT(0);
+atomic_t MCE_DURING_VMENTRY_COUNT = ATOMIC_INIT(0);
+atomic_t TPR_BELOW_THRESHOLD_COUNT = ATOMIC_INIT(0);
+atomic_t APIC_ACCESS_COUNT      = ATOMIC_INIT(0);
+atomic_t EOI_INDUCED_COUNT      = ATOMIC_INIT(0);
+atomic_t GDTR_IDTR_COUNT        = ATOMIC_INIT(0);
+atomic_t LDTR_TR_COUNT          = ATOMIC_INIT(0);
+atomic_t EPT_VIOLATION_COUNT    = ATOMIC_INIT(0);
+atomic_t EPT_MISCONFIG_COUNT    = ATOMIC_INIT(0);
+atomic_t INVEPT_COUNT           = ATOMIC_INIT(0);
+atomic_t RDTSC_COUNTP           = ATOMIC_INIT(0);
+atomic_t PREEMPTION_TIMER_COUNT = ATOMIC_INIT(0);
+atomic_t INVVPID_COUNT          = ATOMIC_INIT(0);
+atomic_t WBINVD_COUNT           = ATOMIC_INIT(0);
+atomic_t XSETBV_COUNT           = ATOMIC_INIT(0);
+atomic_t APIC_WRITE_COUNT       = ATOMIC_INIT(0);
+atomic_t RDRAND_COUNT           = ATOMIC_INIT(0);
+atomic_t INVPCID_COUNT          = ATOMIC_INIT(0);
+atomic_t VMFUNC_COUNT           = ATOMIC_INIT(0);
+atomic_t ENCLS_COUNT            = ATOMIC_INIT(0);
+atomic_t RDSEED_COUNT           = ATOMIC_INIT(0);
+atomic_t PML_FULL_COUNT         = ATOMIC_INIT(0);
+atomic_t XSAVES_COUNT           = ATOMIC_INIT(0);
+atomic_t XRSTORS_COUNT          = ATOMIC_INIT(0);
+atomic_t UMWAIT_COUNT           = ATOMIC_INIT(0);
+atomic_t TPAUSE_COUNT           = ATOMIC_INIT(0);
+
+
+atomic64_t EXCEPTION_NMI_TIMECYCLES    = ATOMIC_INIT(0);
+atomic64_t EXTERNAL_INTERRUPT_TIMECYCLES = ATOMIC_INIT(0);
+atomic64_t TRIPLE_FAULT_TIMECYCLES     = ATOMIC_INIT(0);
+atomic64_t INIT_SIGNAL_TIMECYCLES	  = ATOMIC_INIT(0);
+atomic64_t SIPI_SIGNAL_TIMECYCLES      = ATOMIC_INIT(0);
+atomic64_t INTERRUPT_WINDOW_TIMECYCLES = ATOMIC_INIT(0);
+atomic64_t NMI_WINDOW_TIMECYCLES       = ATOMIC_INIT(0);
+atomic64_t TASK_SWITCH_TIMECYCLES      = ATOMIC_INIT(0);
+atomic64_t CPUID_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t HLT_TIMECYCLES              = ATOMIC_INIT(0);
+atomic64_t INVD_TIMECYCLES             = ATOMIC_INIT(0);
+atomic64_t INVLPG_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t RDPMC_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t RDTSC_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t VMCALL_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t VMCLEAR_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t VMLAUNCH_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t VMPTRLD_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t VMPTRST_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t VMREAD_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t VMRESUME_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t VMWRITE_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t VMOFF_TIMECYCLES             = ATOMIC_INIT(0);
+atomic64_t VMON_TIMECYCLES              = ATOMIC_INIT(0);
+atomic64_t CR_ACCESS_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t DR_ACCESS_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t IO_INSTRUCTION_TIMECYCLES    = ATOMIC_INIT(0);
+atomic64_t MSR_READ_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t MSR_WRITE_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t INVALID_STATE_TIMECYCLES     = ATOMIC_INIT(0);
+atomic64_t MSR_LOAD_FAIL_TIMECYCLES     = ATOMIC_INIT(0);
+atomic64_t MWAIT_INSTRUCTION_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t MONITOR_TRAP_FLAG_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t MONITOR_INSTRUCTION_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t PAUSE_INSTRUCTION_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t MCE_DURING_VMENTRY_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t TPR_BELOW_THRESHOLD_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t APIC_ACCESS_TIMECYCLES       = ATOMIC_INIT(0);
+atomic64_t EOI_INDUCED_TIMECYCLES       = ATOMIC_INIT(0);
+atomic64_t GDTR_IDTR_TIMECYCLES         = ATOMIC_INIT(0);
+atomic64_t LDTR_TR_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t EPT_VIOLATION_TIMECYCLES     = ATOMIC_INIT(0);
+atomic64_t EPT_MISCONFIG_TIMECYCLES     = ATOMIC_INIT(0);
+atomic64_t INVEPT_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t RDTSC_TIMECYCLESP           = ATOMIC_INIT(0);
+atomic64_t PREEMPTION_TIMER_TIMECYCLES  = ATOMIC_INIT(0);
+atomic64_t INVVPID_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t WBINVD_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t XSETBV_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t APIC_WRITE_TIMECYCLES        = ATOMIC_INIT(0);
+atomic64_t RDRAND_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t INVPCID_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t VMFUNC_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t ENCLS_TIMECYCLES             = ATOMIC_INIT(0);
+atomic64_t RDSEED_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t PML_FULL_TIMECYCLES          = ATOMIC_INIT(0);
+atomic64_t XSAVES_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t XRSTORS_TIMECYCLES           = ATOMIC_INIT(0);
+atomic64_t UMWAIT_TIMECYCLES            = ATOMIC_INIT(0);
+atomic64_t TPAUSE_TIMECYCLES            = ATOMIC_INIT(0);
+
+
+EXPORT_SYMBOL(EXCEPTION_NMI_COUNT);
+EXPORT_SYMBOL(EXTERNAL_INTERRUPT_COUNT); 
+EXPORT_SYMBOL(TRIPLE_FAULT_COUNT);     
+EXPORT_SYMBOL(INIT_SIGNAL_COUNT);	  
+EXPORT_SYMBOL(SIPI_SIGNAL_COUNT);      
+EXPORT_SYMBOL(INTERRUPT_WINDOW_COUNT); 
+EXPORT_SYMBOL(NMI_WINDOW_COUNT);       
+EXPORT_SYMBOL(TASK_SWITCH_COUNT);      
+EXPORT_SYMBOL(CPUID_COUNT);            
+EXPORT_SYMBOL(HLT_COUNT);              
+EXPORT_SYMBOL(INVD_COUNT);             
+EXPORT_SYMBOL(INVLPG_COUNT);           
+EXPORT_SYMBOL(RDPMC_COUNT);            
+EXPORT_SYMBOL(RDTSC_COUNT);
+EXPORT_SYMBOL(VMCALL_COUNT);           
+EXPORT_SYMBOL(VMCLEAR_COUNT);          
+EXPORT_SYMBOL(VMLAUNCH_COUNT);         
+EXPORT_SYMBOL(VMPTRLD_COUNT);          
+EXPORT_SYMBOL(VMPTRST_COUNT);          
+EXPORT_SYMBOL(VMREAD_COUNT);           
+EXPORT_SYMBOL(VMRESUME_COUNT);         
+EXPORT_SYMBOL(VMWRITE_COUNT);          
+EXPORT_SYMBOL(VMOFF_COUNT);            
+EXPORT_SYMBOL(VMON_COUNT);             
+EXPORT_SYMBOL(CR_ACCESS_COUNT);        
+EXPORT_SYMBOL(DR_ACCESS_COUNT);        
+EXPORT_SYMBOL(IO_INSTRUCTION_COUNT);   
+EXPORT_SYMBOL(MSR_READ_COUNT);         
+EXPORT_SYMBOL(MSR_WRITE_COUNT);        
+EXPORT_SYMBOL(INVALID_STATE_COUNT);    
+EXPORT_SYMBOL(MSR_LOAD_FAIL_COUNT);    
+EXPORT_SYMBOL(MWAIT_INSTRUCTION_COUNT); 
+EXPORT_SYMBOL(MONITOR_TRAP_FLAG_COUNT); 
+EXPORT_SYMBOL(MONITOR_INSTRUCTION_COUNT); 
+EXPORT_SYMBOL(PAUSE_INSTRUCTION_COUNT); 
+EXPORT_SYMBOL(MCE_DURING_VMENTRY_COUNT); 
+EXPORT_SYMBOL(TPR_BELOW_THRESHOLD_COUNT); 
+EXPORT_SYMBOL(APIC_ACCESS_COUNT);      
+EXPORT_SYMBOL(EOI_INDUCED_COUNT);      
+EXPORT_SYMBOL(GDTR_IDTR_COUNT);        
+EXPORT_SYMBOL(LDTR_TR_COUNT);          
+EXPORT_SYMBOL(EPT_VIOLATION_COUNT);    
+EXPORT_SYMBOL(EPT_MISCONFIG_COUNT);    
+EXPORT_SYMBOL(INVEPT_COUNT);           
+EXPORT_SYMBOL(RDTSC_COUNTP);           
+EXPORT_SYMBOL(PREEMPTION_TIMER_COUNT); 
+EXPORT_SYMBOL(INVVPID_COUNT);          
+EXPORT_SYMBOL(WBINVD_COUNT);           
+EXPORT_SYMBOL(XSETBV_COUNT);           
+EXPORT_SYMBOL(APIC_WRITE_COUNT);       
+EXPORT_SYMBOL(RDRAND_COUNT);           
+EXPORT_SYMBOL(INVPCID_COUNT);          
+EXPORT_SYMBOL(VMFUNC_COUNT);           
+EXPORT_SYMBOL(ENCLS_COUNT);            
+EXPORT_SYMBOL(RDSEED_COUNT);           
+EXPORT_SYMBOL(PML_FULL_COUNT);         
+EXPORT_SYMBOL(XSAVES_COUNT);           
+EXPORT_SYMBOL(XRSTORS_COUNT);          
+EXPORT_SYMBOL(UMWAIT_COUNT);           
+EXPORT_SYMBOL(TPAUSE_COUNT);
+
+EXPORT_SYMBOL(EXCEPTION_NMI_TIMECYCLES);
+EXPORT_SYMBOL(EXTERNAL_INTERRUPT_TIMECYCLES);
+EXPORT_SYMBOL(TRIPLE_FAULT_TIMECYCLES); 
+EXPORT_SYMBOL(INIT_SIGNAL_TIMECYCLES);
+EXPORT_SYMBOL(SIPI_SIGNAL_TIMECYCLES); 
+EXPORT_SYMBOL(INTERRUPT_WINDOW_TIMECYCLES); 
+EXPORT_SYMBOL(NMI_WINDOW_TIMECYCLES); 
+EXPORT_SYMBOL(TASK_SWITCH_TIMECYCLES); 
+EXPORT_SYMBOL(CPUID_TIMECYCLES); 
+EXPORT_SYMBOL(HLT_TIMECYCLES);              
+EXPORT_SYMBOL(INVD_TIMECYCLES);             
+EXPORT_SYMBOL(INVLPG_TIMECYCLES);           
+EXPORT_SYMBOL(RDPMC_TIMECYCLES);            
+EXPORT_SYMBOL(RDTSC_TIMECYCLES);            
+EXPORT_SYMBOL(VMCALL_TIMECYCLES);           
+EXPORT_SYMBOL(VMCLEAR_TIMECYCLES);          
+EXPORT_SYMBOL(VMLAUNCH_TIMECYCLES);         
+EXPORT_SYMBOL(VMPTRLD_TIMECYCLES);          
+EXPORT_SYMBOL(VMPTRST_TIMECYCLES);          
+EXPORT_SYMBOL(VMREAD_TIMECYCLES);           
+EXPORT_SYMBOL(VMRESUME_TIMECYCLES);         
+EXPORT_SYMBOL(VMWRITE_TIMECYCLES);          
+EXPORT_SYMBOL(VMOFF_TIMECYCLES );            
+EXPORT_SYMBOL(VMON_TIMECYCLES );             
+EXPORT_SYMBOL(CR_ACCESS_TIMECYCLES );        
+EXPORT_SYMBOL(DR_ACCESS_TIMECYCLES );        
+EXPORT_SYMBOL(IO_INSTRUCTION_TIMECYCLES );   
+EXPORT_SYMBOL(MSR_READ_TIMECYCLES );         
+EXPORT_SYMBOL(MSR_WRITE_TIMECYCLES );        
+EXPORT_SYMBOL(INVALID_STATE_TIMECYCLES );    
+EXPORT_SYMBOL(MSR_LOAD_FAIL_TIMECYCLES );    
+EXPORT_SYMBOL(MWAIT_INSTRUCTION_TIMECYCLES );
+EXPORT_SYMBOL(MONITOR_TRAP_FLAG_TIMECYCLES );
+EXPORT_SYMBOL(MONITOR_INSTRUCTION_TIMECYCLES );
+EXPORT_SYMBOL(PAUSE_INSTRUCTION_TIMECYCLES ); 
+EXPORT_SYMBOL(MCE_DURING_VMENTRY_TIMECYCLES );
+EXPORT_SYMBOL(TPR_BELOW_THRESHOLD_TIMECYCLES );
+EXPORT_SYMBOL(APIC_ACCESS_TIMECYCLES );      
+EXPORT_SYMBOL(EOI_INDUCED_TIMECYCLES );      
+EXPORT_SYMBOL(GDTR_IDTR_TIMECYCLES );        
+EXPORT_SYMBOL(LDTR_TR_TIMECYCLES );          
+EXPORT_SYMBOL(EPT_VIOLATION_TIMECYCLES);    
+EXPORT_SYMBOL(EPT_MISCONFIG_TIMECYCLES);    
+EXPORT_SYMBOL(INVEPT_TIMECYCLES );           
+EXPORT_SYMBOL(RDTSC_TIMECYCLESP);           
+EXPORT_SYMBOL(PREEMPTION_TIMER_TIMECYCLES ); 
+EXPORT_SYMBOL(INVVPID_TIMECYCLES );          
+EXPORT_SYMBOL(WBINVD_TIMECYCLES );           
+EXPORT_SYMBOL(XSETBV_TIMECYCLES );           
+EXPORT_SYMBOL(APIC_WRITE_TIMECYCLES );       
+EXPORT_SYMBOL(RDRAND_TIMECYCLES );           
+EXPORT_SYMBOL(INVPCID_TIMECYCLES );          
+EXPORT_SYMBOL(VMFUNC_TIMECYCLES );           
+EXPORT_SYMBOL(ENCLS_TIMECYCLES );            
+EXPORT_SYMBOL(RDSEED_TIMECYCLES );           
+EXPORT_SYMBOL(PML_FULL_TIMECYCLES );         
+EXPORT_SYMBOL(XSAVES_TIMECYCLES );           
+EXPORT_SYMBOL(XRSTORS_TIMECYCLES );          
+EXPORT_SYMBOL(UMWAIT_TIMECYCLES );           
+EXPORT_SYMBOL(TPAUSE_TIMECYCLES );
+
 int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 {
 	u32 eax, ebx, ecx, edx;
 	uint64_t time_cycles;
+	bool valid = true;
 
 	if (cpuid_fault_enabled(vcpu) && !kvm_require_cpl(vcpu, 0))
 		return 1;
@@ -1298,6 +1546,425 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 		ecx = (u32)time_cycles;
 		printk(KERN_INFO "Higher Bits: %u, Lower Bits: %u", ebx, ecx);
 	}
+	
+	else if(eax == 0x4FFFFFFC){
+		
+		
+		switch(ecx){
+		
+			case 5:
+			case 6:
+			case 11:
+			case 17:
+			case 66:
+			case 69:
+				eax = ebx = ecx = edx = 0;
+				valid = false;
+				break;
+				
+
+			case EXIT_REASON_EXCEPTION_NMI:
+				time_cycles = atomic64_read(&EXCEPTION_NMI_TIMECYCLES);
+				break;
+			case EXIT_REASON_EXTERNAL_INTERRUPT:
+				time_cycles = atomic64_read(&EXTERNAL_INTERRUPT_TIMECYCLES);
+				break;
+			case EXIT_REASON_TRIPLE_FAULT:
+				time_cycles = atomic64_read(&TRIPLE_FAULT_TIMECYCLES);
+				break;    
+			case EXIT_REASON_INIT_SIGNAL:
+				time_cycles = atomic64_read(&INIT_SIGNAL_TIMECYCLES);
+				break;		
+			case EXIT_REASON_SIPI_SIGNAL:
+				time_cycles = atomic64_read(&SIPI_SIGNAL_TIMECYCLES);
+				break;     
+			case EXIT_REASON_INTERRUPT_WINDOW:
+				time_cycles = atomic64_read(&INTERRUPT_WINDOW_TIMECYCLES);
+				break;
+			case EXIT_REASON_NMI_WINDOW:
+				time_cycles = atomic64_read(&NMI_WINDOW_TIMECYCLES);
+				break;      
+			case EXIT_REASON_TASK_SWITCH:
+				time_cycles = atomic64_read(&TASK_SWITCH_TIMECYCLES);
+				break;     
+			case EXIT_REASON_CPUID:
+				time_cycles = atomic64_read(&CPUID_TIMECYCLES);
+				break;           
+			case EXIT_REASON_HLT:
+				time_cycles = atomic64_read(&HLT_TIMECYCLES);
+				break;             
+			case EXIT_REASON_INVD:
+				time_cycles = atomic64_read(&INVD_TIMECYCLES);
+				break;            
+			case EXIT_REASON_INVLPG:
+				time_cycles = atomic64_read(&INVLPG_TIMECYCLES);
+				break;          
+			case EXIT_REASON_RDPMC:
+				time_cycles = atomic64_read(&RDPMC_TIMECYCLES);
+				break;           
+			case EXIT_REASON_RDTSC:
+				time_cycles = atomic64_read(&RDTSC_TIMECYCLES);
+				break;           
+			case EXIT_REASON_VMCALL:
+				time_cycles = atomic64_read(&VMCALL_TIMECYCLES);
+				break;          
+			case EXIT_REASON_VMCLEAR:
+				time_cycles = atomic64_read(&VMCLEAR_TIMECYCLES);
+				break;         
+			case EXIT_REASON_VMLAUNCH:
+				time_cycles = atomic64_read(&VMLAUNCH_TIMECYCLES);
+				break;        
+			case EXIT_REASON_VMPTRLD:
+				time_cycles = atomic64_read(&VMPTRLD_TIMECYCLES);
+				break;         
+			case EXIT_REASON_VMPTRST:
+				time_cycles = atomic64_read(&VMPTRST_TIMECYCLES);
+				break;         
+			case EXIT_REASON_VMREAD:
+				time_cycles = atomic64_read(&VMREAD_TIMECYCLES);
+				break;          
+			case EXIT_REASON_VMRESUME:
+				time_cycles = atomic64_read(&VMRESUME_TIMECYCLES);
+				break;        
+			case EXIT_REASON_VMWRITE:
+				time_cycles = atomic64_read(&VMWRITE_TIMECYCLES);
+				break;         
+			case EXIT_REASON_VMOFF:
+				time_cycles = atomic64_read(&VMOFF_TIMECYCLES );
+				break;           
+			case EXIT_REASON_VMON:
+				time_cycles = atomic64_read(&VMON_TIMECYCLES );
+				break;            
+			case EXIT_REASON_CR_ACCESS:
+				time_cycles = atomic64_read(&CR_ACCESS_TIMECYCLES );
+				break;       
+			case EXIT_REASON_DR_ACCESS:
+				time_cycles = atomic64_read(&DR_ACCESS_TIMECYCLES );
+				break;       
+			case EXIT_REASON_IO_INSTRUCTION:
+				time_cycles = atomic64_read(&IO_INSTRUCTION_TIMECYCLES );
+				break;  
+			case EXIT_REASON_MSR_READ:
+				time_cycles = atomic64_read(&MSR_READ_TIMECYCLES );
+				break;        
+			case EXIT_REASON_MSR_WRITE:
+				time_cycles = atomic64_read(&MSR_WRITE_TIMECYCLES );
+				break;       
+			case EXIT_REASON_INVALID_STATE:
+				time_cycles = atomic64_read(&INVALID_STATE_TIMECYCLES );
+				break;   
+			case EXIT_REASON_MSR_LOAD_FAIL:
+				time_cycles = atomic64_read(&MSR_LOAD_FAIL_TIMECYCLES );
+				break;   
+			case EXIT_REASON_MWAIT_INSTRUCTION:
+				time_cycles = atomic64_read(&MWAIT_INSTRUCTION_TIMECYCLES );
+				break;
+			case EXIT_REASON_MONITOR_TRAP_FLAG:
+				time_cycles = atomic64_read(&MONITOR_TRAP_FLAG_TIMECYCLES );
+				break;
+			case EXIT_REASON_MONITOR_INSTRUCTION:
+				time_cycles = atomic64_read(&MONITOR_INSTRUCTION_TIMECYCLES );
+				break;
+			case EXIT_REASON_PAUSE_INSTRUCTION:
+				time_cycles = atomic64_read(&PAUSE_INSTRUCTION_TIMECYCLES );
+				break;
+			case EXIT_REASON_MCE_DURING_VMENTRY:
+				time_cycles = atomic64_read(&MCE_DURING_VMENTRY_TIMECYCLES );
+				break;
+			case EXIT_REASON_TPR_BELOW_THRESHOLD:
+				time_cycles = atomic64_read(&TPR_BELOW_THRESHOLD_TIMECYCLES );
+				break;
+			case EXIT_REASON_APIC_ACCESS:
+				time_cycles = atomic64_read(&APIC_ACCESS_TIMECYCLES );
+				break;     
+			case EXIT_REASON_EOI_INDUCED:
+				time_cycles = atomic64_read(&EOI_INDUCED_TIMECYCLES );
+				break;     
+			case EXIT_REASON_GDTR_IDTR:
+				time_cycles = atomic64_read(&GDTR_IDTR_TIMECYCLES );
+				break;       
+			case EXIT_REASON_LDTR_TR:
+				time_cycles = atomic64_read(&LDTR_TR_TIMECYCLES );
+				break;         
+			case EXIT_REASON_EPT_VIOLATION:
+				time_cycles = atomic64_read(&EPT_VIOLATION_TIMECYCLES );
+				break;   
+			case EXIT_REASON_EPT_MISCONFIG:
+				time_cycles = atomic64_read(&EPT_MISCONFIG_TIMECYCLES);
+				break;   
+			case EXIT_REASON_INVEPT:
+				time_cycles = atomic64_read(&INVEPT_TIMECYCLES );
+				break;          
+			case EXIT_REASON_RDTSCP:
+				time_cycles = atomic64_read(&RDTSC_TIMECYCLESP);
+				break;          
+			case EXIT_REASON_PREEMPTION_TIMER:
+				time_cycles = atomic64_read(&PREEMPTION_TIMER_TIMECYCLES );
+				break;
+			case EXIT_REASON_INVVPID:
+				time_cycles = atomic64_read(&INVVPID_TIMECYCLES );
+				break;         
+			case EXIT_REASON_WBINVD:
+				time_cycles = atomic64_read(&WBINVD_TIMECYCLES );
+				break;          
+			case EXIT_REASON_XSETBV:
+				time_cycles = atomic64_read(&XSETBV_TIMECYCLES );
+				break;          
+			case EXIT_REASON_APIC_WRITE:
+				time_cycles = atomic64_read(&APIC_WRITE_TIMECYCLES );
+				break;      
+			case EXIT_REASON_RDRAND:
+				time_cycles = atomic64_read(&RDRAND_TIMECYCLES );
+				break;          
+			case EXIT_REASON_INVPCID:
+				time_cycles = atomic64_read(&INVPCID_TIMECYCLES );
+				break;         
+			case EXIT_REASON_VMFUNC:
+				time_cycles = atomic64_read(&VMFUNC_TIMECYCLES );
+				break;          
+			case EXIT_REASON_ENCLS:
+				time_cycles = atomic64_read(&ENCLS_TIMECYCLES );
+				break;           
+			case EXIT_REASON_RDSEED:
+				time_cycles = atomic64_read(&RDSEED_TIMECYCLES );
+				break;          
+			case EXIT_REASON_PML_FULL:
+				time_cycles = atomic64_read(&PML_FULL_TIMECYCLES );
+				break;        
+			case EXIT_REASON_XSAVES:
+				time_cycles = atomic64_read(&XSAVES_TIMECYCLES );
+				break;          
+			case EXIT_REASON_XRSTORS:
+				time_cycles = atomic64_read(&XRSTORS_TIMECYCLES );
+				break;         
+			case EXIT_REASON_UMWAIT:
+				time_cycles = atomic64_read(&UMWAIT_TIMECYCLES );
+				break;          
+			case EXIT_REASON_TPAUSE:
+				time_cycles = atomic64_read(&TPAUSE_TIMECYCLES );
+				break;
+			
+			default:
+				eax = ebx = ecx = 0;
+				edx = 0xFFFFFFFF;
+				valid = false;
+		}
+		
+		if (valid == true){	
+		
+			// update ebx with high 32 bits of time cycles
+			ebx = (u32)(time_cycles >> 32);
+			
+			// update ecx with low 32 bits of time cycles
+			ecx = (u32)time_cycles;
+			
+		}
+			
+		
+	}
+	
+	else if(eax == 0x4FFFFFFD){
+		
+		switch(ecx){
+		
+			case 5:
+			case 6:
+			case 11:
+			case 17:
+			case 66:
+			case 69:
+				eax = ebx = ecx = edx = 0;
+				break;
+				
+			case EXIT_REASON_EXCEPTION_NMI:
+				eax = atomic_read(&EXCEPTION_NMI_COUNT);
+				break;
+			case EXIT_REASON_EXTERNAL_INTERRUPT:
+				eax = atomic_read(&EXTERNAL_INTERRUPT_COUNT);
+				break;
+			case EXIT_REASON_TRIPLE_FAULT:
+				eax = atomic_read(&TRIPLE_FAULT_COUNT);
+				break;    
+			case EXIT_REASON_INIT_SIGNAL:
+				eax = atomic_read(&INIT_SIGNAL_COUNT);
+				break;		
+			case EXIT_REASON_SIPI_SIGNAL:
+				eax = atomic_read(&SIPI_SIGNAL_COUNT);
+				break;     
+			case EXIT_REASON_INTERRUPT_WINDOW:
+				eax = atomic_read(&INTERRUPT_WINDOW_COUNT);
+				break;
+			case EXIT_REASON_NMI_WINDOW:
+				eax = atomic_read(&NMI_WINDOW_COUNT);
+				break;      
+			case EXIT_REASON_TASK_SWITCH:
+				eax = atomic_read(&TASK_SWITCH_COUNT);
+				break;     
+			case EXIT_REASON_CPUID:
+				eax = atomic_read(&CPUID_COUNT);
+				break;           
+			case EXIT_REASON_HLT:
+				eax = atomic_read(&HLT_COUNT);
+				break;             
+			case EXIT_REASON_INVD:
+				eax = atomic_read(&INVD_COUNT);
+				break;            
+			case EXIT_REASON_INVLPG:
+				eax = atomic_read(&INVLPG_COUNT);
+				break;          
+			case EXIT_REASON_RDPMC:
+				eax = atomic_read(&RDPMC_COUNT);
+				break;           
+			case EXIT_REASON_RDTSC:
+				eax = atomic_read(&RDTSC_COUNT);
+				break;           
+			case EXIT_REASON_VMCALL:
+				atomic_read(&VMCALL_COUNT);
+				break;          
+			case EXIT_REASON_VMCLEAR:
+				eax = atomic_read(&VMCLEAR_COUNT);
+				break;         
+			case EXIT_REASON_VMLAUNCH:
+				eax = atomic_read(&VMLAUNCH_COUNT);
+				break;        
+			case EXIT_REASON_VMPTRLD:
+				eax = atomic_read(&VMPTRLD_COUNT);
+				break;         
+			case EXIT_REASON_VMPTRST:
+				eax = atomic_read(&VMPTRST_COUNT);
+				break;         
+			case EXIT_REASON_VMREAD:
+				eax = atomic_read(&VMREAD_COUNT);
+				break;          
+			case EXIT_REASON_VMRESUME:
+				eax = atomic_read(&VMRESUME_COUNT);
+				break;        
+			case EXIT_REASON_VMWRITE:
+				eax = atomic_read(&VMWRITE_COUNT);
+				break;         
+			case EXIT_REASON_VMOFF:
+				eax = atomic_read(&VMOFF_COUNT);
+				break;           
+			case EXIT_REASON_VMON:
+				eax = atomic_read(&VMON_COUNT);
+				break;            
+			case EXIT_REASON_CR_ACCESS:
+				eax = atomic_read(&CR_ACCESS_COUNT);
+				break;       
+			case EXIT_REASON_DR_ACCESS:
+				eax = atomic_read(&DR_ACCESS_COUNT);
+				break;       
+			case EXIT_REASON_IO_INSTRUCTION:
+				eax = atomic_read(&IO_INSTRUCTION_COUNT);
+				break;  
+			case EXIT_REASON_MSR_READ:
+				eax = atomic_read(&MSR_READ_COUNT);
+				break;        
+			case EXIT_REASON_MSR_WRITE:
+				eax = atomic_read(&MSR_WRITE_COUNT);
+				break;       
+			case EXIT_REASON_INVALID_STATE:
+				eax = atomic_read(&INVALID_STATE_COUNT);
+				break;   
+			case EXIT_REASON_MSR_LOAD_FAIL:
+				eax = atomic_read(&MSR_LOAD_FAIL_COUNT);
+				break;   
+			case EXIT_REASON_MWAIT_INSTRUCTION:
+				eax = atomic_read(&MWAIT_INSTRUCTION_COUNT);
+				break;
+			case EXIT_REASON_MONITOR_TRAP_FLAG:
+				eax = atomic_read(&MONITOR_TRAP_FLAG_COUNT);
+				break;
+			case EXIT_REASON_MONITOR_INSTRUCTION:
+				eax = atomic_read(&MONITOR_INSTRUCTION_COUNT);
+				break;
+			case EXIT_REASON_PAUSE_INSTRUCTION:
+				eax = atomic_read(&PAUSE_INSTRUCTION_COUNT);
+				break;
+			case EXIT_REASON_MCE_DURING_VMENTRY:
+				eax = atomic_read(&MCE_DURING_VMENTRY_COUNT);
+				break;
+			case EXIT_REASON_TPR_BELOW_THRESHOLD:
+				eax = atomic_read(&TPR_BELOW_THRESHOLD_COUNT);
+				break;
+			case EXIT_REASON_APIC_ACCESS:
+				eax = atomic_read(&APIC_ACCESS_COUNT);
+				break;     
+			case EXIT_REASON_EOI_INDUCED:
+				eax = atomic_read(&EOI_INDUCED_COUNT);
+				break;     
+			case EXIT_REASON_GDTR_IDTR:
+				eax = atomic_read(&GDTR_IDTR_COUNT);
+				break;       
+			case EXIT_REASON_LDTR_TR:
+				eax = atomic_read(&LDTR_TR_COUNT);
+				break;         
+			case EXIT_REASON_EPT_VIOLATION:
+				eax = atomic_read(&EPT_VIOLATION_COUNT);
+				break;   
+			case EXIT_REASON_EPT_MISCONFIG:
+				eax = atomic_read(&EPT_MISCONFIG_COUNT);
+				break;   
+			case EXIT_REASON_INVEPT:
+				eax = atomic_read(&INVEPT_COUNT);
+				break;          
+			case EXIT_REASON_RDTSCP:
+				eax = atomic_read(&RDTSC_COUNTP);
+				break;          
+			case EXIT_REASON_PREEMPTION_TIMER:
+				eax = atomic_read(&PREEMPTION_TIMER_COUNT);
+				break;
+			case EXIT_REASON_INVVPID:
+				eax = atomic_read(&INVVPID_COUNT);
+				break;         
+			case EXIT_REASON_WBINVD:
+				eax = atomic_read(&WBINVD_COUNT);
+				break;          
+			case EXIT_REASON_XSETBV:
+				eax = atomic_read(&XSETBV_COUNT);
+				break;          
+			case EXIT_REASON_APIC_WRITE:
+				eax = atomic_read(&APIC_WRITE_COUNT);
+				break;      
+			case EXIT_REASON_RDRAND:
+				eax = atomic_read(&RDRAND_COUNT);
+				break;          
+			case EXIT_REASON_INVPCID:
+				eax = atomic_read(&INVPCID_COUNT);
+				break;         
+			case EXIT_REASON_VMFUNC:
+				eax = atomic_read(&VMFUNC_COUNT);
+				break;          
+			case EXIT_REASON_ENCLS:
+				eax = atomic_read(&ENCLS_COUNT);
+				break;           
+			case EXIT_REASON_RDSEED:
+				eax = atomic_read(&RDSEED_COUNT);
+				break;          
+			case EXIT_REASON_PML_FULL:
+				eax = atomic_read(&PML_FULL_COUNT);
+				break;        
+			case EXIT_REASON_XSAVES:
+				eax = atomic_read(&XSAVES_COUNT);
+				break;          
+			case EXIT_REASON_XRSTORS:
+				eax = atomic_read(&XRSTORS_COUNT);
+				break;         
+			case EXIT_REASON_UMWAIT:
+				eax = atomic_read(&UMWAIT_COUNT);
+				break;          
+			case EXIT_REASON_TPAUSE:
+				eax = atomic_read(&TPAUSE_COUNT);
+				break;
+
+			default:
+				eax = ebx = ecx = 0;
+				edx = 0xFFFFFFFF;
+		}
+			
+		
+	}
+	
 	else
 	{
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
